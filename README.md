@@ -36,4 +36,10 @@ After clone this project . Remember to edit Mysql server in application.properti
 - spring.datasource.password=
 - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
 
+Illustration
+
+https://github.com/congphuong1703/order-banquet/blob/main/1.png
+https://github.com/congphuong1703/order-banquet/blob/main/2.png
+https://github.com/congphuong1703/order-banquet/blob/main/3.png
+
 # Good luck.
