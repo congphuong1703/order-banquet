@@ -38,8 +38,8 @@ After clone this project . Remember to edit Mysql server in application.properti
 
 Illustration
 
-https://raw.github.com/congphuong1703/order-banquet/blob/main/1.png
-https://github.com/congphuong1703/order-banquet/blob/main/2.png
-https://github.com/congphuong1703/order-banquet/blob/main/3.png
+![3](https://user-images.githubusercontent.com/51237215/103078175-e540af80-4603-11eb-8d2c-e0bfaba27c37.png)
+![1](https://user-images.githubusercontent.com/51237215/103078178-e70a7300-4603-11eb-9513-7ffde05d9d7b.png)
+![2](https://user-images.githubusercontent.com/51237215/103078171-e245bf00-4603-11eb-9990-a26ce5b6c4ea.png)
 
 # Good luck.
