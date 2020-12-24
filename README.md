@@ -38,7 +38,7 @@ After clone this project . Remember to edit Mysql server in application.properti
 
 Illustration
 
-https://github.com/congphuong1703/order-banquet/blob/main/1.png
+https://raw.github.com/congphuong1703/order-banquet/blob/main/1.png
 https://github.com/congphuong1703/order-banquet/blob/main/2.png
 https://github.com/congphuong1703/order-banquet/blob/main/3.png
 
