@@ -10,7 +10,7 @@ Language programing
 - Java
 - HTML
 - CSS (Bootstrap)
-- JS
+- JS (Chart.js 2.6.0)
 
 Template
 https://startbootstrap.com/theme/freelancer
@@ -22,7 +22,8 @@ CRUD
 - Customer management
 - Order banquet
 - Report with monthly, quarterly, annual
-
+- Search invoice with customer code 
+- Payment invoice. If paid after the date of the reservation, it will increase money
 Relationship 
 - OneToOne
 - ManyToMany
