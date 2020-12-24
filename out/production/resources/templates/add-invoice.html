@@ -1,0 +1,91 @@
+
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Invoice</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container mt-2 mb-2">
+        <a class="navbar-brand js-scroll-trigger" th:href="@{/home}">Order Banquet</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                     th:href="@{/food}">Food</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                     th:href="@{/customer}">Customer</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                     th:href="@{/invoice}">Invoice</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                     th:href="@{/lobby}">Lobby</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                     th:href="@{/service}">Service</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <h1 class="masthead-heading text-uppercase mb-0">Add Invoice</h1>
+    </div>
+</header>
+<div class="container">
+    <form th:object="${invoice}" th:action="@{/invoice/add}" th:method="post">
+        <div class="mb-3">
+            <label th:text="Code" th:for="code"></label>
+            <input type="text" th:field="*{code}" class="form-control" placeholder="Code"/>
+        </div>
+        <div class="mb-3">
+            <label th:text="Customer" th:for="customer"></label>
+            <input type="text" th:field="*{customer}" class="form-control" placeholder="Customer"/>
+        </div>
+        <div id="customer"></div>
+
+        <div class="mb-3">
+            <select th:field="*{lobby}" multiple="multiple" class="form-control">
+                <option th:each="lobby: ${lobbies}" th:value="${lobby.id}" th:text="${lobby.code}"></option>
+            </select>
+        </div>
+        <div id="insertLobby"></div>
+        <div class="mb-3">
+            <select th:field="*{food}" multiple="multiple" class="form-control">
+                <option th:each="food : ${foods}" th:value="${food.id}" th:text="${food.code}"></option>
+            </select>
+        </div>
+        <div id="insertFood"></div>
+        <div class="mb-3">
+            <select th:field="*{service}" multiple="multiple" class="form-control">
+                <option th:each="service : ${services}" th:value="${service.id}" th:text="${service.code}"></option>
+            </select>
+        </div>
+        <div id="insertService"></div>
+        <div class="mb-3">
+            <label th:for="dateOfOrder">Date Of Order</label>
+            <input type="date" th:field="*{dateOfOrder}" class="form-control" placeholder="Date Of Order"/>
+        </div>
+        <div class="mb-3">
+            <label th:text="Shift" th:for="shift"></label>
+            <input type="text" th:field="*{shift}" class="form-control" placeholder="Shift"/>
+        </div>
+        <div style="clear: both; display: block; height: 10px"></div>
+        <input type="submit" class="btn btn-success" value="Addition"/>
+    </form>
+</div>
+<div class="copyright py-4 text-center text-white">
+    <div class="container">
+        <small>Copyright © 12-22-2020</small>
+    </div>
+</div>
+</body>
+</html>
